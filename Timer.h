@@ -10,13 +10,8 @@ public:
     Timer():Timer(false){}
 
     Timer(bool is_starting){
-        if (is_starting){
-            Timer::Start();
-        }
-        else{
-            Timer::Start();
-            current_condition = false;
-        }
+        Timer::Start();
+        current_condition = is_starting;
         duration = duration.zero();
     }
     ~Timer(){
